@@ -1,3 +1,26 @@
+/**
+ * MIT License
+
+Copyright (c) 2017 deepakshajan
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ */
 
 "use strict";
 
@@ -94,14 +117,14 @@ var cwp_nmsp = {};
 
 	namespace.CWP_SOLUTION_ARRAY = [[null,	null,	null,	null,	null,	null,	null,	null,	null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	null,	null,	null,	null,	null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
-	                                [null,	null,	null,	null,	null,	null,	null,	null,	null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],   
+	                                [null,	null,	null,	null,	null,	null,	null,	null,	null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	 'R',	 'H',	 'I',	 'N',	 'O',	 'C',    'E',    'R',    'O',    'S',   null,   null,   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	null,	null,	null,	null,	null,    'L',   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	 'G',	 'I',	 'R',	 'A',	 'F',	 'F',    'E',   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	null,	null,	null,	null,	null,    'P',   null,   null,   null,   null,    'H',   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	null,	 'M',	null,	null,	null,    'H',   null,   null,   null,    'D',    'O',    'G',   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	null,	 'O',	null,	null,	null,    'A',   null,   null,    'C',   null,    'R',   null,   null,   null,   null,   null],
-	                                [null,	null,	null,	 'P',	 'E',	 'N',	 'G',	 'U',	 'I',    'N',   null,   null,    'A',   null,    'S',   null,   null,   null,   null,   null],   
+	                                [null,	null,	null,	 'P',	 'E',	 'N',	 'G',	 'U',	 'I',    'N',   null,   null,    'A',   null,    'S',   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	null,	 'K',	null,	null,	null,    'T',    'U',    'R',    'T',    'L',    'E',   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	 'Z',	 'E',	 'B',	 'R',	 'A',   null,   null,    'A',   null,    'I',   null,   null,   null,   null,   null,   null],
 	                                [null,	null,	null,	null,	null,	 'Y',	null,	null,	null,   null,   null,    'B',   null,    'O',   null,   null,   null,   null,   null,   null],
@@ -171,14 +194,14 @@ var cwp_nmsp = {};
 		        [null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
 		        [null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
 		        [null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null],
-		        [null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null]]; 
+		        [null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null,   null]];
 	};
 
 	namespace.CWP_USER_INPUT_ARRAY = namespace.resetUserInputArray();
 
 	namespace.redrawQuestions = function() {
 
-		var qContainerAcross = document.getElementById("cwp_q_across_container"); 
+		var qContainerAcross = document.getElementById("cwp_q_across_container");
 		var qContainerDown = document.getElementById("cwp_q_down_container");
 
 		var docFragAcross = document.createDocumentFragment();
@@ -258,7 +281,7 @@ var cwp_nmsp = {};
 						}
 						cellClone.setAttribute("disabled", true);
 						if(null !== userInput) {
-							cellClone.setAttribute("value", userInput);	
+							cellClone.setAttribute("value", userInput);
 						}
 						if(userInput === solution) {
 							cellClone.className+= " cwp_cell_sol_true";
@@ -335,7 +358,7 @@ var cwp_nmsp = {};
 					if(this.value) {
 						this.value = null;
 					}
-					namespace.CWP_USER_INPUT_ARRAY[rowIndex][colIndex] = String.fromCharCode(event.keyCode).toUpperCase();	
+					namespace.CWP_USER_INPUT_ARRAY[rowIndex][colIndex] = String.fromCharCode(event.keyCode).toUpperCase();
 				}
 			});
 		}
